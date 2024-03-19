@@ -1,0 +1,42 @@
+{{#each error}}
+<div class="alert alert-danger">{{text}}</div>
+
+{{else}}
+{{/each}}
+<section id="section2">
+    <h2 class="h3 mt-2 text-center mb-4" id="title">New post</h2>
+
+    <div class="card mx-auto" id="fields">
+        <div class="card-body">
+            <form action="/admin/posts/new" method="POST">
+                <label for="title">Title </label>
+                <input type="text" name="title" class="form-control mb-3" placeholder="Title" required>
+
+                <label for="slug">Slug </label>
+                <input type="text" name="slug" class="form-control mb-3" placeholder="Slug" required>
+
+                <label for="description">Description </label>
+                <input type="text" name="description" class="form-control mb-3" placeholder="Description" required>
+
+                <label for="content">Content </label>
+                <textarea name="content" class='form-control mb-3' placeholder="Content" required></textarea>
+
+                <label for="category">Category </label>
+                <select name="category" class="custom-select">
+                    <option selected>Choose...</option>
+                    {{#each categories}}
+                    <option value="{{_id}}">{{name}}</option>
+                    {{else}}
+                    <option value="0"> No registered categories </option>
+                    {{/each}}
+                </select>
+
+                <button type="submit" class="btn btn-primary btn-lg btn-block mt-4"> Create </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer>
+    &copy; 2024<a href="mailto:ruthmariia01@gmail.com" id="copyright">DROP</a>, Inc. All rights reserved.
+</footer>

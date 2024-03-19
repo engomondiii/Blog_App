@@ -1,0 +1,31 @@
+<div class="jumbotron" style="background-color: #034183; color:white; border-radius 20px;" >
+  <h1 class="display-4" style="font-size: 30px;">Wellcome to Diabetes Remission And Obesity Prevention(DROP) blog Section</h1>
+  <p class="lead" style="font-size: 18px;">This is your go-to destination for insightful articles, tips, and resources on diabetes remission and obesity prevention. Dive into our curated collection of blog posts crafted by experts in the field, covering a wide range of topics including nutrition, exercise, lifestyle modifications, and the latest research findings. Stay informed, inspired, and empowered as you embark on your journey towards better health and well-being with the resources available in our Blog section.</p>
+  <hr class="my-4">
+</div>
+
+<h2>Recent posts</h2>
+<div class="card-columns">
+
+  {{#each posts}}
+  <div class='card text-center mt-4' id="format">
+    <div class="card-body">
+      <h3 class="card-title">{{title}}</h3>
+      <p class="card-text">{{description}}</p>
+      <a href="/post/{{slug}}" class="btn btn-info btn-sm" >Read more</a>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Category: {{category.name}}</small><br>
+      <small class="text-muted">Publish date: {{#formatDate date}}{{/formatDate}}</small>
+    </div>
+  </div>
+
+  {{else}}
+  <h5> No posts </h5>
+
+  {{/each}}
+</div>
+
+<footer>
+  &copy; 2024 <a href="mailto:ruthmariia01@gmail.com" id="copyright">DROP</a>, Inc. All rights reserved.
+</footer>

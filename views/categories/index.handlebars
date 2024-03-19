@@ -1,0 +1,18 @@
+<!-- Categories name -->
+
+<div class="card mb-3 text-center mx-auto mt-5" id="format3">
+    <h4 class="card-header">Categories</h4>
+    <div class="card-body">
+        {{#each categories}}
+
+        <a href="/categories/{{slug}}" class="h5 text-center text-info"> {{name}} </a><br>
+
+        {{else}}
+
+        {{/each}}
+    </div>
+</div>
+
+<footer>
+    &copy; 2024 <a href="mailto:ruthmariia01@gmail.com" id="copyright">DROP</a>, Inc. All rights reserved.
+</footer>
